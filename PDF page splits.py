@@ -31,7 +31,7 @@ def extract_pdf_pages(input_pdf, output_folder, page_numbers):
 
 if __name__ == "__main__":
     # User input for the file path and output folder
-    input_pdf = input("Enter the path to the PDF file: ").strip()
+    input_pdf = input("Enter the path of PDF file: ").strip()
     output_folder = input("Enter the output folder path: ").strip()
 
     # User input for specific page numbers
