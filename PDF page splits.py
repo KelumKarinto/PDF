@@ -30,15 +30,10 @@ def extract_pdf_pages(input_pdf, output_folder, page_numbers):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    # User input for the file path and output folder
-    input_pdf = input("Enter the path of PDF file: ").strip()
-    output_folder = input("Enter the output folder path: ").strip()
+    # Define file paths and parameters directly in the script
+    input_pdf = "/home/kelum/Downloads/Papers for read/s42247-024-00678-1.pdf"  # Replace with the path to your input PDF file
+    output_folder = "/home/kelum/Desktop/Repos/PDF Editing"  # Replace with the desired output folder path
+    page_numbers = [1, 2, 5]  # Replace with the list of pages you want to extract
 
-    # User input for specific page numbers
-    try:
-        pages = input("Enter the page numbers to extract (comma-separated): ").strip()
-        page_numbers = list(map(int, pages.split(",")))
-
-        extract_pdf_pages(input_pdf, output_folder, page_numbers)
-    except ValueError:
-        print("Invalid input. Please enter page numbers as comma-separated integers.")
+    # Call the function
+    extract_pdf_pages(input_pdf, output_folder, page_numbers)
